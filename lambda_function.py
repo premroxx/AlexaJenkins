@@ -3,7 +3,7 @@ import random
 
 
 def lambda_handler(event, context):
-    server = jenkins.Jenkins('http://54.85.232.121:8080/', username='deloitteadmin', password='password')
+    server = jenkins.Jenkins('http://54.85.232.121:8080/', username='deloitteadmin', password='')
     server.build_job('deploy_pizza_to_prod_app_server',
                      {'ip_address': '34.198.25.2', 'deploy_db': 'True', 'deploy_backend': 'True',
                       'deploy_frontend': 'True'})
